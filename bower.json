@@ -1,0 +1,19 @@
+{
+  "name": "editor",
+  "version": "0.0.0",
+  "description": "my editor packeges",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.x",
+    "angular": "1.2.x"
+  }
+}
