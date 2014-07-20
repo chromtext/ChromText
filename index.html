@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="chromtext">
 	<head>
-		<title>Title Page</title>
+		<title>ChromText</title>
 
 		<meta charset="UTF-8">
 		<meta name=description content="">
@@ -11,7 +11,7 @@
 		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" type="text/css" href="style/css/editor-style.css">
 	</head>
-	<body>
+	<body ng-controller="editorCtrl">
 		<nav class="navbar navbar-default" role="navigation">
 		  <div class="container-fluid">
 		  <div class="navbar-header">
@@ -33,10 +33,11 @@
 		        </li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Edit</a>
-		          <ul class="dropdown-menu" role="menu">
-		            <li><a href="#">Theme</a></li>
-		            <li><a href="#">Test</a></li>
-		            <li><a href="#">Test</a></li>
+		          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		            <li class="dropdown-submenu">
+		           	<li ng-repeat="theme in themes">
+		           		<a href="#" ng-click="changeTheme(theme)">{{theme}}</a>
+		           	</li>
 		            <li class="divider"></li>
 		            <li><a href="#">Settings</a></li>
 		          </ul>
@@ -60,5 +61,6 @@
 		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/controllers/editorCtrl.js"></script>
 	</body>
 </html>
